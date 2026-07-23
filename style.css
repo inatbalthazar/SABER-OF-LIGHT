@@ -6,18 +6,14 @@
 
 body {
     font-family: Arial;
-    color: #333;
-    background-color: #fff;
+    color: white;
+    background-color: #242424;
     line-height: 1.5;
 }
 
 a {
     color: #1fa0d9;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .topbar {
@@ -41,12 +37,12 @@ a:hover {
     border-bottom: none;
 }
 
-.hero-box {
+.hero > div {
     max-width: 800px;
     margin-left: 5%;
 }
 
-.hero-title {
+.hero h1 {
     font-size: 54px;
     font-weight: 700;
     line-height: 1.1;
@@ -54,22 +50,22 @@ a:hover {
     letter-spacing: 1px;
 }
 
-.hero-title .hl {
+.hero h1 span {
     color: #1fa0d9;
     text-shadow: 0 0 15px rgba(31, 160, 217, 0.6);
 }
 
-.hero-sub {
+.hero p {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 35px;
     letter-spacing: 0.5px;
 }
 
-.btn-hero {
+.hero a {
     display: inline-block;
     background-color: rgba(31, 160, 217, 1);
-    color: #fff;
+    color: white;
     padding: 14px 28px;
     font-size: 14px;
     font-weight: 600;
@@ -79,7 +75,7 @@ a:hover {
     transition: background-color 0.3s;
 }
 
-.btn-hero:hover {
+.hero a:hover {
     background-color: #0c689f;
     text-decoration: none;
 }
@@ -98,10 +94,6 @@ a:hover {
     font-size: 15px;
 }
 
-.price.centered {
-    justify-content: center;
-    gap: 20px;
-}
 
 .qty {
     display: flex;
@@ -134,7 +126,7 @@ a:hover {
     font-weight: bold;
 }
 
-.btn-buy {
+.item > button {
     background: #1083c7;
     color: #fff;
     border: none;
@@ -145,45 +137,64 @@ a:hover {
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     text-transform: uppercase;
+    margin-top: auto;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-.btn-buy span {
+.item > button span {
     font-size: 10px;
 }
 
-.btn-buy:hover {
+.item > button:hover {
     background: #0c689f;
+}
+
+section {
+    text-align: center;
+    padding: 50px 20px;
 }
 
 .sec-cats {
     padding: 30px 20px;
-    text-align: center;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #000;
     border-bottom: 3px solid #b1b1b194;
 }
 
-.container {
+.sec-cats > div {
     max-width: 1000px;
     margin: 0 auto;
     text-align: left;
     padding: 10px 0;
 }
 
-.cat-title {
-    font-size: 20px;
+section h2 {
+    font-size: 18px;
     font-weight: 700;
-    color: #333;
+    color: white;
     margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.5px;
+}
+
+section h2 span {
+    background: #1fa0d9;
+    color: white;
+    padding: 2px 6px;
+    font-size: 12px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+section > p {
+    font-size: 13px;
+    margin-bottom: 30px;
 }
 
 .cat-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     gap: 50px;
 }
 
@@ -216,12 +227,12 @@ a:hover {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;   
+    right: 0;
     height: 60%;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
 }
 
-.label {
+.card div {
     position: absolute;
     bottom: 15px;
     left: 15px;
@@ -232,7 +243,7 @@ a:hover {
     line-height: 1.3;
 }
 
-.btn-chk {
+footer button {
     background: #222;
     color: #f5f5f5;
     border: none;
@@ -245,7 +256,6 @@ a:hover {
 }
 
 .sec-prods {
-    padding: 50px 20px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -264,68 +274,46 @@ a:hover {
     height: 100%;
 }
 
-.item .btn-buy {
-    margin-top: auto;
+.item img, .dock img {
+    border: 1px solid #444;
+    transition: transform 0.4s ease, border-color 0.3s, box-shadow 0.3s;
 }
 
 .item img {
     max-width: 200px;
     height: 230px;
-    transition: transform 0.3s;
 }
 
-.item:hover img {
+.item:hover img, .dock:hover img {
     transform: scale(1.05);
+    border-color: #1fa0d9;
+    box-shadow: 0 0 15px rgba(31, 160, 217, 0.4);
 }
 
 
 
 .item p {
     font-size: 11px;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.item .btn-buy {
-    width: 100%;
-    justify-content: center;
+    color: #aaa;
     margin-bottom: 15px;
 }
 
 .sec-docks {
-    background: #000;
+    background: #242424;
     padding: 60px 20px;
-    text-align: center;
     color: #ffffff94;
 }
 
-.sec-title {
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
 
-.sec-title span {
-    background: #1fa0d9;
-    color: white;
-    padding: 2px 6px;
-    font-size: 12px;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.sec-sub {
-    font-size: 12px;
-    margin-bottom: 40px;
-}
 
 .dock {
+    flex: 0 0 calc(50% - 15px);
     margin-bottom: 50px;
 }
 
 .dock img {
     max-width: 300px;
-    width: 100%;
+    cursor: pointer;
 }
 
 .dock p {
@@ -341,25 +329,12 @@ a:hover {
 }
 
 .sec-accs {
-    padding: 50px 20px;
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
     padding-bottom: 120px;
 }
 
-.acc-title {
-    font-size: 13px;
-    margin-bottom: 30px;
-}
 
-.grid > .item {
-    width: calc(25% - 22.5px);
-}
-
-.sec-accs .grid > .item {
-    width: calc(33.333% - 20px);
-}
 
 .grid .item img {
     max-width: 220px;
@@ -371,10 +346,10 @@ a:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: white;
+    background: #111;
     border-top: 1px solid #3384bb;
     padding: 15px 30px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .foot-in {
@@ -390,7 +365,7 @@ a:hover {
     align-items: center;
     gap: 20px;
     font-size: 12px;
-    color: #666;
+    color: #ccc;
 }
 
 
@@ -401,25 +376,27 @@ a:hover {
     gap: 20px;
 }
 
-.foot-r .total {
+.foot-r > span {
     font-size: 24px;
     font-weight: 700;
 }
 
 @media (max-width: 992px) {
-    .grid > .item {
+    .grid>.item {
         width: calc(33.333% - 15px);
     }
 }
 
 @media (max-width: 768px) {
-    .grid > .item {
+    .grid>.item {
         width: calc(50% - 15px);
     }
 }
 
 @media (max-width: 480px) {
-    .grid > .item {
+    .grid>.item,
+    .dock {
+        flex: 0 0 100%;
         width: 100%;
     }
 
